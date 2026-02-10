@@ -6,7 +6,8 @@ Foi implementado um fluxo completo e automatizado para versionamento e releases 
 
 ## ✨ O Que Foi Criado
 
-### 1. **Scripts NPM Automatizados** 
+### 1. **Scripts NPM Automatizados**
+
 Adicionados ao `package.json`:
 
 ```json
@@ -17,26 +18,29 @@ Adicionados ao `package.json`:
 
 ### 2. **Documentação Completa**
 
-| Arquivo | Propósito |
-|---------|-----------|
-| `CONTRIBUTING.md` | Guia completo de contribuição com seção detalhada sobre versionamento |
-| `RELEASE-GUIDE.md` | Referência rápida visual com exemplos práticos |
-| `.gitmessage` | Template de commit para padronização |
-| `release.ps1` | Script assistido para Windows com validações |
-| `release.sh` | Script assistido para Linux/Mac com validações |
+| Arquivo            | Propósito                                                             |
+| ------------------ | --------------------------------------------------------------------- |
+| `CONTRIBUTING.md`  | Guia completo de contribuição com seção detalhada sobre versionamento |
+| `RELEASE-GUIDE.md` | Referência rápida visual com exemplos práticos                        |
+| `.gitmessage`      | Template de commit para padronização                                  |
+| `release.ps1`      | Script assistido para Windows com validações                          |
+| `release.sh`       | Script assistido para Linux/Mac com validações                        |
 
 ### 3. **Diagramas Visuais**
+
 Fluxograma Mermaid ilustrando o processo completo de release
 
 ## 🚀 Como Usar (Super Simples!)
 
 ### Opção 1: Comando Direto (Mais Rápido)
+
 ```bash
 # Após commitar suas alterações:
 npm run release:minor
 ```
 
 ### Opção 2: Script Assistido (Mais Seguro)
+
 ```powershell
 # No Windows:
 .\release.ps1
@@ -46,6 +50,7 @@ npm run release:minor
 ```
 
 ### Opção 3: Totalmente Manual
+
 ```bash
 npm version minor
 git push
@@ -59,7 +64,7 @@ git push --tags
 ✅ **Rastreabilidade** - Tags Git para cada versão  
 ✅ **Documentação** - Guias claros para novos mantenedores  
 ✅ **Segurança** - Validações automáticas no script assistido  
-✅ **Semantic Versioning** - Versionamento profissional  
+✅ **Semantic Versioning** - Versionamento profissional
 
 ## 📚 Estrutura de Documentação
 
@@ -116,6 +121,7 @@ npm publish
 ## 🔄 Comparação: Antes vs Depois
 
 ### ❌ Antes
+
 ```bash
 # Processo manual e propenso a erros
 1. Editar package.json manualmente
@@ -128,6 +134,7 @@ npm publish
 ```
 
 ### ✅ Depois
+
 ```bash
 # Um comando, tudo automatizado
 npm run release:minor
@@ -137,11 +144,11 @@ npm run release:minor
 
 O projeto agora segue [Semantic Versioning](https://semver.org/):
 
-| Comando | Quando Usar | Exemplo |
-|---------|-------------|---------|
-| `release:patch` | 🐛 Bugs e correções | 1.0.1 → 1.0.2 |
+| Comando         | Quando Usar              | Exemplo       |
+| --------------- | ------------------------ | ------------- |
+| `release:patch` | 🐛 Bugs e correções      | 1.0.1 → 1.0.2 |
 | `release:minor` | ✨ Novas funcionalidades | 1.0.1 → 1.1.0 |
-| `release:major` | 💥 Breaking changes | 1.0.1 → 2.0.0 |
+| `release:major` | 💥 Breaking changes      | 1.0.1 → 2.0.0 |
 
 ## 🎯 Próximos Passos
 

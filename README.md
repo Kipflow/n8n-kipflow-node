@@ -7,12 +7,14 @@ Este é um node customizado do n8n para enriquecimento de dados de empresas bras
 ### Para uso no n8n
 
 #### Instalação via npm (Community Node)
+
 1. No n8n, vá em **Settings** > **Community Nodes**
 2. Clique em **Install Community Node**
 3. Digite: `n8n-nodes-kipflow`
 4. Clique em Install
 
 #### Instalação manual
+
 ```bash
 npm install n8n-nodes-kipflow
 ```
@@ -72,6 +74,7 @@ O node **Kipflow CNPJ Enrichment** enriquece dados de empresas brasileiras usand
 ## Scripts disponíveis
 
 ### Desenvolvimento
+
 - `npm run build` - Compila o projeto
 - `npm run dev` - Compila em modo watch
 - `npm run lint` - Verifica problemas no código
@@ -79,6 +82,7 @@ O node **Kipflow CNPJ Enrichment** enriquece dados de empresas brasileiras usand
 - `npm run format` - Formata o código
 
 ### Versionamento (após commit das alterações)
+
 - `npm run release:patch` - Correções de bugs (1.0.1 → 1.0.2)
 - `npm run release:minor` - Novas funcionalidades (1.0.1 → 1.1.0)
 - `npm run release:major` - Breaking changes (1.0.1 → 2.0.0)
@@ -88,6 +92,7 @@ O node **Kipflow CNPJ Enrichment** enriquece dados de empresas brasileiras usand
 Para contribuir com o projeto ou fazer releases, consulte o [Guia de Contribuição](CONTRIBUTING.md).
 
 O guia inclui:
+
 - 🛠️ Como configurar o ambiente de desenvolvimento
 - 🚀 **Fluxo completo de versionamento e releases**
 - 📝 Padrões de código e commits

@@ -1,5 +1,5 @@
 {
-  "node": "n8n-nodes-base.kipflowCnpjEnrichment",
+  "node": "n8n-nodes-kipflow.kipflowCnpjEnrichment",
   "nodeVersion": "1.0",
   "codexVersion": "1.0",
   "categories": ["Data Transformation"],

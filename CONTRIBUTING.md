@@ -1,6 +1,7 @@
 # Guia de Contribuição
 
 ## 📋 Índice
+
 - [Desenvolvimento](#desenvolvimento)
 - [Versionamento e Releases](#versionamento-e-releases)
 - [Padrões de Código](#padrões-de-código)
@@ -37,6 +38,7 @@ npm run dev
 > 💡 **Referência Rápida:** Veja [RELEASE-GUIDE.md](RELEASE-GUIDE.md) para um guia visual e resumido.
 
 Este projeto segue o [Semantic Versioning (SemVer)](https://semver.org/):
+
 - **MAJOR** (X.0.0): Mudanças incompatíveis com versões anteriores
 - **MINOR** (0.X.0): Novas funcionalidades mantendo compatibilidade
 - **PATCH** (0.0.X): Correções de bugs
@@ -59,6 +61,7 @@ npm run release:major
 ```
 
 Esses comandos fazem automaticamente:
+
 1. ✅ Atualiza a versão no `package.json`
 2. ✅ Cria um commit com a mensagem de versão
 3. ✅ Cria uma tag git (ex: `v1.0.2`)
@@ -70,17 +73,20 @@ Esses comandos fazem automaticamente:
 Para um fluxo mais seguro com validações automáticas, use o script helper:
 
 **No Windows (PowerShell):**
+
 ```powershell
 .\release.ps1
 ```
 
 **No Linux/Mac:**
+
 ```bash
 chmod +x release.sh
 ./release.sh
 ```
 
 O script irá:
+
 - Verificar se há alterações não commitadas
 - Executar lint e build automaticamente
 - Pedir confirmação antes de prosseguir
@@ -105,6 +111,7 @@ git push --tags
 ### Antes de Fazer um Release
 
 ✅ **Checklist:**
+
 - [ ] Todos os testes passando
 - [ ] Código formatado (`npm run format`)
 - [ ] Sem erros de lint (`npm run lint`)
@@ -175,6 +182,7 @@ Descrição mais detalhada (opcional)
 ```
 
 **Tipos:**
+
 - `feat`: Nova funcionalidade
 - `fix`: Correção de bug
 - `docs`: Alterações na documentação
@@ -184,6 +192,7 @@ Descrição mais detalhada (opcional)
 - `chore`: Manutenção, configurações, etc
 
 **Exemplos:**
+
 ```bash
 git commit -m "feat: adiciona suporte para múltiplos CNPJs"
 git commit -m "fix: corrige validação de CNPJ inválido"
@@ -191,9 +200,11 @@ git commit -m "docs: atualiza guia de instalação"
 ```
 
 **Dica:** Configure o template de commit do projeto:
+
 ```bash
 git config commit.template .gitmessage
 ```
+
 Isso mostrará um lembrete dos padrões toda vez que você fizer commit!
 
 ### Formatação

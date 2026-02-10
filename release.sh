@@ -1,21 +1,76 @@
 #!/bin/bash
 
-# 🚀 Script de Release Automatizado
-# Este script demonstra o fluxo de release do projeto
+# Script de Release Automatizado
+# Executa o fluxo completo: commit → push → version → tag → publish
 
 echo "=========================================="
-echo "  🎯 Kipflow n8n Node - Release Helper"
+echo "  Kipflow n8n Node - Release Helper"
 echo "=========================================="
 echo ""
 
 # Verifica se há alterações não commitadas
 if [[ -n $(git status -s) ]]; then
-    echo "❌ Erro: Existem alterações não commitadas."
-    echo "   Por favor, faça commit de todas as alterações antes de continuar."
-    exit 1
+    echo "Existem alterações não commitadas:"
+    git status -s
+    echo ""
+    
+    read -p "Deseja commitar essas alterações? (s/N): " doCommit
+    
+    if [[ $doCommit =~ ^[SsYy]$ ]]; then
+        # Git add
+        echo ""
+        echo "Adicionando arquivos..."
+        git add .
+        
+        # Pede mensagem de commit
+        echo ""
+        echo "Exemplos de mensagens:"
+        echo "  feat: adiciona nova funcionalidade X"
+        echo "  fix: corrige bug Y"
+        echo "  docs: atualiza documentação"
+        echo ""
+        read -p "Digite a mensagem do commit: " commitMsg
+        
+        if [[ -z "$commitMsg" ]]; then
+            echo "❌ Mensagem de commit não pode ser vazia!"
+            exit 1
+        fi
+        
+        # Git commit
+        echo ""
+        echo "Fazendo commit..."
+        git commit -m "$commitMsg"
+        
+        if [ $? -ne 0 ]; then
+            echo "❌ Erro ao fazer commit!"
+            exit 1
+        fi
+        
+        echo "✅ Commit realizado com sucesso"
+        echo ""
+        
+        # Git push
+        read -p "Deseja fazer push agora? (s/N): " doPush
+        if [[ $doPush =~ ^[SsYy]$ ]]; then
+            echo ""
+            echo "Fazendo push..."
+            git push
+            
+            if [ $? -ne 0 ]; then
+                echo "❌ Erro ao fazer push!"
+                exit 1
+            fi
+            
+            echo "✅ Push realizado com sucesso"
+        fi
+    else
+        echo "❌ Release cancelado. Commit suas alterações antes de continuar."
+        exit 0
+    fi
+else
+    echo "✅ Working directory limpo"
 fi
 
-echo "✅ Working directory limpo"
 echo ""
 
 # Pergunta o tipo de release
@@ -105,8 +160,32 @@ if [ $? -eq 0 ]; then
     echo "  ✅ Push realizado"
     echo "  ✅ Tag enviada para o repositório"
     echo ""
-    echo "🎉 Pronto para publicar no npm (se necessário):"
-    echo "   npm publish"
+    
+    # Pergunta sobre publicação no npm
+    read -p "Deseja publicar no npm agora? (s/N): " doPublish
+    
+    if [[ $doPublish =~ ^[SsYy]$ ]]; then
+        echo ""
+        echo "📦 Publicando no npm..."
+        npm publish
+        
+        if [ $? -eq 0 ]; then
+            echo ""
+            echo "=========================================="
+            echo "  ✅ Publicado no npm com sucesso!"
+            echo "=========================================="
+            echo ""
+            echo "📦 Versão $NEW_VERSION está disponível em:"
+            echo "https://www.npmjs.com/package/n8n-nodes-kipflow"
+        else
+            echo ""
+            echo "❌ Erro ao publicar no npm!"
+            echo "Você pode tentar manualmente: npm publish"
+        fi
+    else
+        echo ""
+        echo "Para publicar depois, execute: npm publish"
+    fi
 else
     echo ""
     echo "❌ Erro ao fazer release!"
