@@ -5,8 +5,8 @@ import {
   INodeProperties,
 } from 'n8n-workflow';
 
-export class DrivaSearchApi implements ICredentialType {
-  name = 'drivaSearchApi';
+export class KipflowApi implements ICredentialType {
+  name = 'kipflowApi';
   displayName = 'Kipflow API';
   documentationUrl = 'https://docs.kipflow.io';
   properties: INodeProperties[] = [

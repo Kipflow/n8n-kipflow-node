@@ -3,7 +3,6 @@ import {
   INodeExecutionData,
   INodeType,
   INodeTypeDescription,
-  NodeApiError,
 } from 'n8n-workflow';
 
 const DATASET_PRICES: Record<string, number> = {
@@ -34,7 +33,7 @@ export class KipflowCnpjEnrichment implements INodeType {
     outputs: ['main'],
     credentials: [
       {
-        name: 'drivaSearchApi',
+        name: 'kipflowApi',
         required: true,
       },
     ],
@@ -85,7 +84,7 @@ export class KipflowCnpjEnrichment implements INodeType {
         const cleanCnpj = cnpj.replace(/\D/g, '');
         const datasets = this.getNodeParameter('datasets', i, ['basic']) as string[];
 
-        const credentials = await this.getCredentials('drivaSearchApi');
+        const credentials = await this.getCredentials('kipflowApi');
 
         const response = await this.helpers.httpRequest({
           method: 'GET',

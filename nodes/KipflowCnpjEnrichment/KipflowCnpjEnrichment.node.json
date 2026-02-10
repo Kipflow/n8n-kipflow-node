@@ -6,12 +6,12 @@
   "resources": {
     "credentialDocumentation": [
       {
-        "url": "https://docs.driva.io/search-api"
+        "url": "https://docs.kipflow.io"
       }
     ],
     "primaryDocumentation": [
       {
-        "url": "https://github.com/kipflow/kipflow-backend/tree/main/n8n-node"
+        "url": "https://github.com/Kipflow/n8n-kipflow-node"
       }
     ]
   }
