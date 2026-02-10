@@ -1,0 +1,25 @@
+# Tipo: Descrição curta (máx 50 caracteres)
+
+# Tipos válidos:
+# feat:     Nova funcionalidade
+# fix:      Correção de bug
+# docs:     Alterações na documentação
+# style:    Formatação, ponto e vírgula, etc
+# refactor: Refatoração de código
+# test:     Adição de testes
+# chore:    Manutenção, configurações, etc
+# perf:     Melhorias de performance
+
+# Exemplos:
+# feat: adiciona suporte para múltiplos CNPJs
+# fix: corrige validação de CNPJ inválido
+# docs: atualiza guia de instalação
+# chore: atualiza dependências
+
+# Corpo (opcional): Explique WHAT e WHY, não HOW
+# Máximo 72 caracteres por linha
+
+
+# Footer (opcional): Issues relacionadas
+# Closes #123
+# Refs #456

@@ -71,63 +71,27 @@ O node **Kipflow CNPJ Enrichment** enriquece dados de empresas brasileiras usand
 
 ## Scripts disponíveis
 
+### Desenvolvimento
 - `npm run build` - Compila o projeto
 - `npm run dev` - Compila em modo watch
 - `npm run lint` - Verifica problemas no código
 - `npm run lint:fix` - Corrige problemas automaticamente
 - `npm run format` - Formata o código
 
-## Como fazer atualizações
+### Versionamento (após commit das alterações)
+- `npm run release:patch` - Correções de bugs (1.0.1 → 1.0.2)
+- `npm run release:minor` - Novas funcionalidades (1.0.1 → 1.1.0)
+- `npm run release:major` - Breaking changes (1.0.1 → 2.0.0)
 
-### 1. Modificar o código
+## Desenvolvimento e Contribuição
 
-Edite os arquivos em:
-- `nodes/KipflowCnpjEnrichment/` - Lógica do node
-- `credentials/` - Configuração de credenciais
+Para contribuir com o projeto ou fazer releases, consulte o [Guia de Contribuição](CONTRIBUTING.md).
 
-### 2. Testar localmente
-
-```bash
-# Recompile após mudanças
-npm run build
-
-# Ou use watch mode durante desenvolvimento
-npm run dev
-```
-
-### 3. Testar no n8n local
-
-```bash
-# Link o pacote local
-npm link
-
-# No diretório do n8n
-npm link n8n-nodes-kipflow
-
-# Reinicie o n8n
-```
-
-### 4. Atualizar versão
-
-Edite o `version` no `package.json` seguindo [Semantic Versioning](https://semver.org/):
-- **MAJOR** (1.0.0 → 2.0.0): Breaking changes
-- **MINOR** (1.0.0 → 1.1.0): Novas funcionalidades
-- **PATCH** (1.0.0 → 1.0.1): Correções de bugs
-
-```bash
-# Ou use o comando npm
-npm version patch  # ou minor, ou major
-```
-
-### 5. Publicar
-
-```bash
-# Login no npm (primeira vez)
-npm login
-
-# Publique
-npm publish
-```
+O guia inclui:
+- 🛠️ Como configurar o ambiente de desenvolvimento
+- 🚀 **Fluxo completo de versionamento e releases**
+- 📝 Padrões de código e commits
+- ✅ Checklist antes de fazer um release
 
 ## Estrutura do Projeto
 
