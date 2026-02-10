@@ -38,7 +38,7 @@ npm run dev
 
 ## Configuração
 
-1. Obtenha sua API Key em [Kipflow](https://kipflow.io)
+1. Obtenha sua API Key em [Kipflow](https://platform.kipflow.io/)
 2. No n8n, adicione uma nova credencial do tipo "Kipflow API"
 3. Cole sua API Key
 

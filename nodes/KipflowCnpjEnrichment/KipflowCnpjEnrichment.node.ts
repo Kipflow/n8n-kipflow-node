@@ -4,7 +4,6 @@ import {
   INodeType,
   INodeTypeDescription,
 } from 'n8n-workflow';
-
 const DATASET_PRICES: Record<string, number> = {
   basic: 0.02,
   complete: 0.24,
