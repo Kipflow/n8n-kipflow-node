@@ -1,0 +1,18 @@
+{
+  "node": "n8n-nodes-base.kipflowCnpjEnrichment",
+  "nodeVersion": "1.0",
+  "codexVersion": "1.0",
+  "categories": ["Data Transformation"],
+  "resources": {
+    "credentialDocumentation": [
+      {
+        "url": "https://docs.driva.io/search-api"
+      }
+    ],
+    "primaryDocumentation": [
+      {
+        "url": "https://github.com/kipflow/kipflow-backend/tree/main/n8n-node"
+      }
+    ]
+  }
+}
