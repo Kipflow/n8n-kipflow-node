@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:docs.kipflow.io)",
+      "Bash(npm run build:*)"
+    ]
+  }
+}
